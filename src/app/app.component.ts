@@ -13,17 +13,17 @@ import * as SessionActions from './store/actions/session.actions';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  eventDetails$: Observable<EventDetails>;
-  eventLoaded$: Observable<boolean>;
-
-  constructor(private _store: Store<AppState>) {
-    this.eventDetails$ = this._store.pipe(select(getEvent));
-    this.eventLoaded$ = this._store.pipe(select(getEventLoaded));
-  }
-
-  ngOnInit() {
-    this._store.dispatch(new EventActions.LoadEvent());
-    this._store.dispatch(new SessionActions.LoadSessions()); // TODO fix this and move to schedule component
-  }
+export class AppComponent {
+  // eventDetails$: Observable<EventDetails>;
+  // eventLoaded$: Observable<boolean>;
+  //
+  // constructor(private _store: Store<AppState>) {
+  //   this.eventDetails$ = this._store.pipe(select(getEvent));
+  //   this.eventLoaded$ = this._store.pipe(select(getEventLoaded));
+  // }
+  //
+  // ngOnInit() {
+  //   this._store.dispatch(new EventActions.LoadEvent());
+  //   this._store.dispatch(new SessionActions.LoadSessions()); // TODO fix this and move to schedule component
+  // }
 }
