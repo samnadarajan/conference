@@ -6,6 +6,7 @@ import {InformationPageComponent} from './components/information-page/informatio
 import { SpeakerComponent } from './components/speaker/speaker.component';
 import {CommonModule} from '@angular/common';
 import {MaterialModule} from '../material/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const modules = [
   InformationPageComponent,
@@ -16,7 +17,8 @@ const modules = [
 @NgModule({
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   exports: [...modules],
   declarations: [

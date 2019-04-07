@@ -1,15 +1,23 @@
-<h2>Details</h2>
-<ng-container *ngIf="eventDetails$ | async as eventDetails">
-  {{eventDetails | json}}
-</ng-container>
-<mat-divider></mat-divider>
+<main fxLayout="column">
+  <!-- <ng-container *ngIf="eventDetails$ | async as eventDetails">
+    {{eventDetails | json}}
+  </ng-container> -->
 
-<h2>Schedule</h2>
+  <div id="intro" fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex="80" fxLayout="column" fxLayoutAlign="center center">
+      asdf
+    </div>
+  </div>
 
-<app-schedule></app-schedule>
+  <mat-divider></mat-divider>
 
-<mat-divider></mat-divider>
+  <h2>Schedule</h2>
 
-<h2>Speakers</h2>
-<app-speakers></app-speakers>
+  <app-schedule></app-schedule>
+
+  <mat-divider></mat-divider>
+
+  <h2>Speakers</h2>
+  <app-speakers></app-speakers>
+</main>
 
