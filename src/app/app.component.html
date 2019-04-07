@@ -1,8 +1,8 @@
 <app-header></app-header>
 
-<ng-container *ngIf="eventDetails$ | async as event">
-  <!-- Cast return as an object instead of array to avoid this -->
-  <app-information-page [eventDetails]="event[0]"></app-information-page>
-</ng-container>
+<!--<ng-container *ngIf="eventDetails$ | async as event">-->
+  <!--&lt;!&ndash; Cast return as an object instead of array to avoid this &ndash;&gt;-->
+  <!--<app-information-page [eventDetails]="event[0]"></app-information-page>-->
+<!--</ng-container>-->
 
 <router-outlet></router-outlet>

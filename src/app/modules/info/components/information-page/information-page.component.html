@@ -1,5 +1,7 @@
 <h2>Details</h2>
-{{eventDetails | json}}
+<ng-container *ngIf="eventDetails$ | async as eventDetails">
+  {{eventDetails | json}}
+</ng-container>
 <mat-divider></mat-divider>
 
 <h2>Schedule</h2>
