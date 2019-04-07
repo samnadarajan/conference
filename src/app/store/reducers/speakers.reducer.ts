@@ -8,7 +8,7 @@ export interface SpeakersState {
 }
 
 export const initialSpeakersState: SpeakersState = {
-  list: [],
+  list: [{name: '', profilePicture: '', biography: '', title: ''}],
   error: '',
   loaded: true
 };
@@ -16,7 +16,6 @@ export const initialSpeakersState: SpeakersState = {
 export function speakersReducer(state = initialSpeakersState, action: SpeakerActions.Actions) {
   switch (action.type) {
     case(SpeakerActions.LOAD_SPEAKERS):
-      console.log(action.payload);
       return {...state, loaded: false};
     case(SpeakerActions.LOAD_SPEAKERS_SUCCESS):
       return {...state, list: action.payload, loaded: true};
@@ -26,3 +25,7 @@ export function speakersReducer(state = initialSpeakersState, action: SpeakerAct
       return state;
   }
 }
+
+export const getSpeakersList = (state: SpeakersState) => state ? state.list : [];
+export const getSpeakersLoaded = (state: SpeakersState) => state ? state.loaded : null;
+

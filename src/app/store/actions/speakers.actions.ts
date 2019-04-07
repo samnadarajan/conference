@@ -8,7 +8,7 @@ export const LOAD_SPEAKERS_FAIL = '[SPEAKERS] Load Fail';
 export class LoadSpeakers implements Action {
   readonly type = LOAD_SPEAKERS;
 
-  constructor(public payload: string) {}
+  constructor() {}
 }
 
 export class LoadSpeakersSuccess implements Action {
