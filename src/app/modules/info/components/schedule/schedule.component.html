@@ -1,3 +1,6 @@
-<p>
-  schedule works!
-</p>
+<ng-container>
+  <div *ngFor="let s of (sessionList$ | async)">
+    {{s | json}}
+  </div>
+</ng-container>
+
