@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {EventDetails} from '../../../../models/event-details.model';
 
 @Component({
   selector: 'app-information-page',
   templateUrl: './information-page.component.html',
-  styleUrls: ['./information-page.component.scss']
+  styleUrls: ['./information-page.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InformationPageComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class InformationPageComponent {
+  @Input() eventDetails: EventDetails;
+  constructor() {}
 }

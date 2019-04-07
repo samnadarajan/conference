@@ -13,7 +13,7 @@ export const initialSpeakersState: SpeakersState = {
   loaded: true
 };
 
-export function speakersReducer(state = initialSpeakersState, action: SpeakerActions.Actions) {
+export function speakersReducer(state = initialSpeakersState, action: SpeakerActions.SpeakersActions) {
   switch (action.type) {
     case(SpeakerActions.LOAD_SPEAKERS):
       return {...state, loaded: false};

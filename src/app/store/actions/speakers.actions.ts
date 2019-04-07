@@ -24,4 +24,4 @@ export class LoadSpeakersFail implements Action {
 }
 
 
-export type Actions = LoadSpeakers | LoadSpeakersSuccess | LoadSpeakersFail;
+export type SpeakersActions = LoadSpeakers | LoadSpeakersSuccess | LoadSpeakersFail;
