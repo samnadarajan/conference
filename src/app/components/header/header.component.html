@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+<mat-toolbar id="header" color="primary" fxLayout="row" fxLayoutAlign="space-between center" [ngClass]="{'at-top' : scrollPosition == 0, 'scrolled' : scrollPosition != 0 }">
     <h1>Lightning Talks</h1>
     <div>
         <button mat-button>Countdown</button>

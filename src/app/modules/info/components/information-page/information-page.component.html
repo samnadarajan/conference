@@ -4,20 +4,38 @@
   </ng-container> -->
 
   <div id="intro" fxLayout="row" fxLayoutAlign="center center">
-    <div fxFlex="80" fxLayout="column" fxLayoutAlign="center center">
-      asdf
+    <div fxFlex="90" fxLayout="column" fxLayoutGap="16px" fxLayoutAlign="center center">   
+      <span>{{ countDown }}</span>
+
+      <h2>KL&A Lightning Talks</h2>
+
+      <p>April 25, 2019 at 4:30 PM</p>
+
+      <button mat-button>Learn More</button>
     </div>
   </div>
 
-  <mat-divider></mat-divider>
+  <div id="about" fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex="90" fxLayout="row">   
+      <div fxFlex="75" fxLayout="column" fxLayoutGap="16px">
+          <div>
+              <h2>About KL&A Lightning Talks</h2>
+              <h3>It’ll be fun. Just come.</h3>
+          </div>
+    
+          <p>
+            The KL&A Lightning Talks is an afternoon of 5 minute presentations about development, design, business, project management and more! Regardless of what your title is, there is a little something for everyone.
+          </p>
+    
+          <p>
+              Munch on some food, take a few sips of your beverage and learn about the cool, interesting things that your colleagues are currently involved with at the company.
+          </p>
+      </div>
+      <div fxFlex></div>
+    </div>
+  </div>
 
-  <h2>Schedule</h2>
+  <app-speakers></app-speakers>
 
   <app-schedule></app-schedule>
-
-  <mat-divider></mat-divider>
-
-  <h2>Speakers</h2>
-  <app-speakers></app-speakers>
 </main>
-
