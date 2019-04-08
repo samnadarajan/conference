@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>
+  <ng-container *ngIf="data.name; else addSpeaker">Edit {{data.name}}</ng-container>
+  <ng-template #addSpeaker>Add Speaker</ng-template>
+</h1>
+<div mat-dialog-content class="speaker-form">
+  <mat-form-field>
+    <input matInput placeholder="Name" [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Biography" [(ngModel)]="data.biography"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Title" [(ngModel)]="data.title"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">Cancel</button>
+  <button mat-button cdkFocusInitial (click)="save(data)">Save</button>
+</div>
