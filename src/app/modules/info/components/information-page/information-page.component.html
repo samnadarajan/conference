@@ -1,6 +1,9 @@
 <h2>Details</h2>
 <ng-container *ngIf="eventDetails$ | async as eventDetails">
   {{eventDetails | json}}
+
+  <div countdowntimer [dateTo]="eventDetails[0]?.date?.seconds"></div>
+
 </ng-container>
 <mat-divider></mat-divider>
 
