@@ -1,0 +1,8 @@
+.speaker-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.speaker-form > * {
+  width: 100%;
+}

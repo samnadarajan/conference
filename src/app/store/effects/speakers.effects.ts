@@ -29,4 +29,22 @@ export class SpeakersEffects {
     map((data: any) => new speakerActions.LoadSpeakersSuccess(data)),
     catchError((error) => of(new speakerActions.LoadSpeakersFail(error)))
   );
+
+  @Effect()
+  saveSpeakers$ = this.actions$.pipe(
+    ofType(speakerActions.SAVE_SPEAKER),
+    map((action: speakerActions.SaveSpeaker) => action.payload),
+    switchMap((data: Speaker) => {
+      return new Promise((resolve) => {
+        if (data.id) {
+          this._dataService.update(speakersCollectionName, data);
+        } else {
+          this._dataService.add(speakersCollectionName, data);
+        }
+        resolve(true);
+      });
+    }),
+    map(() => new speakerActions.SaveSpeakerSuccess()),
+    catchError((error) => of(new speakerActions.SaveSpeakerFail(error)))
+  );
 }
