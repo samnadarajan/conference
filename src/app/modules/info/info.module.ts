@@ -6,11 +6,13 @@ import {InformationPageComponent} from './components/information-page/informatio
 import { SpeakerComponent } from './components/speaker/speaker.component';
 import {CommonModule} from '@angular/common';
 import {MaterialModule} from '../material/material.module';
+import {CountdownTimerDirective} from '../../directives/countdown-timer.directive';
 
 const modules = [
   InformationPageComponent,
   ScheduleComponent,
-  SpeakersComponent
+  SpeakersComponent,
+  CountdownTimerDirective
 ];
 
 @NgModule({
@@ -23,7 +25,8 @@ const modules = [
     InformationPageComponent,
     ScheduleComponent,
     SpeakersComponent,
-    SpeakerComponent
+    SpeakerComponent,
+    CountdownTimerDirective
   ]
 })
 export class InfoModule { }
