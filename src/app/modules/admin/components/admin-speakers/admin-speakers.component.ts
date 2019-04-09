@@ -32,7 +32,10 @@ export class AdminSpeakersComponent implements OnInit {
     this.openDialog(speaker);
   }
 
-  openDialog(data: Speaker): void {
+  openDialog(data?: Speaker): void {
+    if (!data) {
+      data = {name: '', profilePicture: '', biography: '', title: ''};
+    }
     this._dialog.open(AdminSpeakerDialogComponent, {data: data});
   }
 
