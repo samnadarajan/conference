@@ -6,6 +6,7 @@ import {Observable} from 'rxjs';
 import {select, Store} from '@ngrx/store';
 import * as EventActions from '../../../../store/actions/event.actions';
 import {AppState} from '../../../../store/app.state';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-information-page',
@@ -38,6 +39,8 @@ export class InformationPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    AOS.init();
+
     this._store.dispatch(new EventActions.LoadEvent());
     this._store.dispatch(new SessionActions.LoadSessions()); // TODO fix this and move to schedule component
 

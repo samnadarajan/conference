@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, HostListener} from '@angular/core';
 import {AppState} from './store/app.state';
 import {select, Store} from '@ngrx/store';
 import * as EventActions from './store/actions/event.actions';
@@ -13,7 +13,19 @@ import * as SessionActions from './store/actions/session.actions';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  scrollPosition: number;
+
+  constructor() { }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.scrollPosition = window.pageYOffset;
+  }
+
+  ngOnInit() {
+    this.onWindowScroll();
+  }
   // eventDetails$: Observable<EventDetails>;
   // eventLoaded$: Observable<boolean>;
   //

@@ -1,8 +1,33 @@
-<app-header></app-header>
+<mat-drawer-container fxLayout="column" autosize>
+  <mat-drawer #drawer mode="over">
+    <p>Auto-resizing sidenav</p>
+  </mat-drawer>
 
-<!--<ng-container *ngIf="eventDetails$ | async as event">-->
-  <!--&lt;!&ndash; Cast return as an object instead of array to avoid this &ndash;&gt;-->
-  <!--<app-information-page [eventDetails]="event[0]"></app-information-page>-->
-<!--</ng-container>-->
+  <header [ngClass]="{'scrolled' : scrollPosition != 0 }">
+      <mat-toolbar class="header-content" color="primary" fxHide.sm fxHide.xs fxLayout="row" fxLayoutAlign="space-between center">
+          <h1 class="site-title">Lightning Talks</h1>
+          <div class="menu-items">
+              <button mat-button [ngx-scroll-to]="'#intro'">Countdown</button>
+              <button mat-button [ngx-scroll-to]="'#about'">About</button>
+              <button mat-button [ngx-scroll-to]="'#speakers'">Speakers</button>
+              <button mat-button [ngx-scroll-to]="'#schedule'">Schedule</button>
+          </div>
+          <span></span>
+      </mat-toolbar>
 
-<router-outlet></router-outlet>
+      <mat-toolbar class="header-content" color="primary" fxHide.xl fxHide.lg fxHide.md fxLayout="row" fxLayoutAlign="space-between center">
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon aria-label="Open menu">menu</mat-icon>
+        </button>
+
+        <h1 class="site-title">Lightning Talks</h1>
+
+        <span></span>
+      </mat-toolbar>
+  </header>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+</mat-drawer-container>

@@ -1,42 +1,167 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import '~material-design-icons/iconfont/material-icons.css';
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700|Lato:100,300,400,700');
 
-body {
+html, body {
     margin: 0;
-
-    * {
-        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-        font-weight: 300;
-    }
+    overflow-x: hidden;
 }
 
-#header {
+h1, h2, h3 {
+    font-family: 'Arvo', serif;
+    margin: 0;
+}
+
+h2 {
+    color: rgba(0,0,0,.87);
+    font-size: 48px;
+}
+
+h3 {
+    color: rgba(0,0,0,.87);
+    font-weight: lighter;
+    font-size: 28px;
+}
+
+p {
+    color: rgba(0,0,0,.87);
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    line-height: 150%;
+    margin: 0;
+}
+
+header {
     left: 0;
     position: fixed;
     top: 0;
-    transition: .2s ease-in-out;
+    width: 100%;
+    z-index: 99;
+
+    .header-content {
+        position:relative;
+        background: transparent !important;
+        z-index:0;
+
+        @media (min-width: 600px) {
+            .menu-items {
+                margin-left: -64px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .site-title {
+                margin-left: -32px;
+            }
+        }
+    }
+
+    .header-content:before {
+        content: "";
+        box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+        position: absolute;
+        z-index:-1;
+        top: 0;  left: 0;  right: 0;  bottom: 0;
+        background: linear-gradient(to right, #00263F , #004B7D);
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform .5s ease-in-out;
+    }
 }
 
-#header.at-top {
-    background: transparent;
-}
-
-#header.scrolled {
-    background: #FFFFFF;
-    color: rgb(0, 75, 125);
+header.scrolled {
+    .header-content:before {
+        transform: scaleX(1);
+    }
 }
 
 #intro {
     background:
-        linear-gradient(
-            rgba(0, 38, 63, 0.8),
-            rgba(0, 75, 125, 0.8)
-        ),
+        linear-gradient(rgba(0, 38, 63, 0.8),rgba(0, 75, 125, 0.8)),
         url('./assets/intro-bg.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #FFFFFF;
+    background-attachment: fixed;
     min-height: 100vh;
+    position: relative;
+
+    .countdown {
+        background: linear-gradient(to right, #F39C35 , #F1C436);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 64px;
+    }
+
+    .event-title {
+        color: #FFFFFF;
+        font-size: 94px;
+        letter-spacing: 2px;
+
+        @media (max-width: 600px) {
+            font-size: 64px;
+        }
+
+        @media (max-height: 768px) {
+            font-size: 64px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 42px;
+        }
+
+        @media (max-height: 400px) {
+            font-size: 42px;
+        }
+    }
+
+    .event-date {
+        color: #FFFFFF;
+        font-size: 36px;
+        font-weight: lighter;
+
+        @media (max-width: 600px) {
+            font-size: 32px;
+        }
+
+        @media (max-height: 768px) {
+            font-size: 32px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 24px;
+        }
+
+        @media (max-height: 400px) {
+            font-size: 24px;
+        }
+    }
+
+    button.learn-more {
+        background: linear-gradient(to right, #F39C35 , #F1C436);
+        border-radius: 500px;
+        bottom: 128px;
+        color: rgb(0, 75, 125);
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        padding: 4px 32px;
+        position: absolute;
+
+        @media (max-height: 768px) {
+            bottom: 64px;
+        }
+
+        @media (max-height: 400px) {
+            bottom: 32px;
+            font-size: 16px;
+            padding: 4px 24px;
+        }
+    }
+}
+
+#about {
+    min-height: calc(50vh - 48px);
+    padding: 24px 0;
 }

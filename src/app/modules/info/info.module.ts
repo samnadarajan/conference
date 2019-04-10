@@ -7,6 +7,7 @@ import { SpeakerComponent } from './components/speaker/speaker.component';
 import {CommonModule} from '@angular/common';
 import {MaterialModule} from '../material/material.module';
 import {CountdownTimerDirective} from '../../directives/countdown-timer.directive';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 const modules = [
   InformationPageComponent,
