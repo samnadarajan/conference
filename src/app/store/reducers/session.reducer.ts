@@ -11,7 +11,7 @@ export const initialSessionState: SessionState = {
   list: [],
   error: {},
   loaded: false
-}
+};
 
 export function sessionReducer(state = initialSessionState, action: sessionActions.SessionActions) {
   switch (action.type) {

@@ -1,3 +1,5 @@
+/* tslint:disable */
+
 import {Directive, ElementRef, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 
 interface CountdownUnits {
