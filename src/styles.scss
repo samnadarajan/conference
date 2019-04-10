@@ -231,4 +231,20 @@ header.scrolled {
         min-height: calc(40vh - 48px);
         padding: 24px 0;
     }
+
+    .speaker {
+        .profile-img {
+            border-radius: 50%;
+            height: 150px;
+            width: 150px;
+        }
+
+        .slack-handle {
+            font-size: 90%;
+
+            .fa {
+                margin-right: 4px;
+            }
+        }
+    }
 }
