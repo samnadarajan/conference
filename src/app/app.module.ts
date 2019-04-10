@@ -14,7 +14,7 @@ import {StoreModule} from '@ngrx/store';
 import {reducers, effects} from './store';
 import {EffectsModule} from '@ngrx/effects';
 import {AdminModule} from './modules/admin/admin.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import {AngularFireStorageModule} from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -30,6 +30,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AdminModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AngularFireStorageModule,
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot(effects),
     FlexLayoutModule
