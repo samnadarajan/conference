@@ -27,6 +27,11 @@ export class InformationPageComponent implements OnInit {
     this.eventLoaded$ = this._store.pipe(select(getEventLoaded));
   }
 
+  public goToAbout(): void {
+      const element = document.getElementById('about');
+      element.scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+
   getCountdown(): any {
     const distance = this.eventDate - this.todayDate;
 

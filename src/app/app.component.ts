@@ -7,7 +7,6 @@ import {EventDetails} from './models/event-details.model';
 import {getEvent, getEventLoaded} from './store/selectors/event.selectors';
 import * as SessionActions from './store/actions/session.actions';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,7 +15,12 @@ import * as SessionActions from './store/actions/session.actions';
 export class AppComponent implements OnInit {
   scrollPosition: number;
 
-  constructor() { }
+  constructor() {}
+
+  public goToSection(section): void {
+    const element = document.getElementById(section);
+    element.scrollIntoView({behavior: 'smooth', block: 'start'});
+}
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
