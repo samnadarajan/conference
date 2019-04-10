@@ -1,6 +1,6 @@
 <div fxLayout="column" *ngIf="eventDetails$ | async as eventDetails">
 
-  <div id="intro" fxLayout="row" fxLayoutAlign="center center">
+  <div id="intro" #intro #intro fxLayout="row" fxLayoutAlign="center center">
     <div fxFlex="90" fxLayout="column" fxLayoutGap="16px" fxLayoutAlign="space-between center" fxLayoutAlign.sm="space-between start" fxLayoutAlign.xs="space-between start">   
       <span></span>
 
@@ -12,14 +12,17 @@
             <span>Lightning Talks</span>
         </h2>
 
-        <p class="event-date" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">April 25, 2019 at 4:30 PM</p>
+        <p class="event-date" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.sm="center start" fxLayoutAlign.xs="center start" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
+          <span>April 25, 2019 at 4:30 PM</span>
+          <span>Easy Bake Oven</span>
+        </p>
       </div>
 
-      <button mat-button class="learn-more" fxLayoutAlign="center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500" data-aos-anchor="#intro">Learn More</button>
+      <button mat-button (click)="goToAbout()" class="learn-more" fxLayoutAlign="center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500" data-aos-anchor="#intro">Learn More</button>
     </div>
   </div>
 
-  <div id="about" fxLayout="row" fxLayoutAlign="center center">
+  <div id="about" #about fxLayout="row" fxLayoutAlign="center center">
     <div fxFlex="90" fxLayout="row">   
       <div fxFlex="75" fxFlex.sm="90" fxFlex.xs="90" fxLayout="column" fxLayoutGap="32px">
           <div>

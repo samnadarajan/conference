@@ -61,6 +61,14 @@ p {
     width: auto;
 }
 
+.mat-drawer:not(.mat-drawer-side) {
+    position: fixed;
+}
+
+.mat-drawer-backdrop {
+    position: fixed !important;
+}
+
 header {
     left: 0;
     position: fixed;
@@ -102,20 +110,18 @@ header {
 
     .header-content:before {
         content: "";
-        box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
         position: absolute;
         z-index:-1;
         top: 0;  left: 0;  right: 0;  bottom: 0;
-        background: #263238;
-        transform: scaleX(0);
-        transform-origin: 0 50%;
-        transition: transform .5s ease-in-out;
+        background: transparent;
+        transition: .25s ease-in-out;
     }
 }
 
 header.scrolled {
     .header-content:before {
-        transform: scaleX(1);
+        background: #263238;
+        box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
     }
 }
 
@@ -253,7 +259,11 @@ header.scrolled {
 
 #about {
     min-height: 40vh;
-    padding: 48px 0;
+    padding: 64px 0;
+
+    @media (max-width: 600px) {
+        padding: 56px 0;
+    }
 }
 
 #speakers {
@@ -265,15 +275,14 @@ header.scrolled {
     background-size: cover;
     background-attachment: fixed;
     min-height: 40vh;
-    padding: 48px 0;
+    padding: 64px 0;
 
     h2, h3 {
         color: #FFFFFF;
     }
 
     @media (max-width: 600px) {
-        min-height: calc(40vh - 48px);
-        padding: 24px 0;
+        padding: 56px 0;
     }
 
     .speaker {
@@ -297,7 +306,11 @@ header.scrolled {
 
 #schedule {
     min-height: 40vh;
-    padding: 48px 0;
+    padding: 64px 0;
+
+    @media (max-width: 600px) {
+        padding: 56px 0;
+    }
 
     .schedule-table {
         tr {
@@ -323,6 +336,22 @@ header.scrolled {
                     font-size: 16px;
                 }
             }
+        }
+    }
+}
+
+#event-date-section {
+    background: #263238;
+    padding: 48px 0;
+    
+    h2 {
+        color: #FFFFFF;
+        font-family: 'Lato', sans-serif;
+        font-size: 36px;
+        font-weight: lighter;
+
+        @media (max-width: 600px) {
+            font-size: 28px;
         }
     }
 }
