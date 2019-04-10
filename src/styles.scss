@@ -1,3 +1,328 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import '~material-design-icons/iconfont/material-icons.css';
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700|Lato:100,300,400,700');
+
+html, body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Arvo', serif;
+    margin: 0;
+}
+
+h2 {
+    color: rgba(0,0,0,.87);
+    font-size: 48px;
+
+    @media (max-width: 600px) {
+        font-size: 32px;
+    }
+
+    @media (max-height: 768px) {
+        font-size: 32px;
+    }
+}
+
+h3 {
+    color: rgba(0,0,0,.87);
+    font-weight: lighter;
+    font-size: 28px;
+
+    @media (max-width: 600px) {
+        font-size: 24px;
+    }
+
+    @media (max-height: 768px) {
+        font-size: 24px;
+    }
+}
+
+p {
+    color: rgba(0,0,0,.87);
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    line-height: 150%;
+    margin: 0;
+
+    @media (max-width: 600px) {
+        font-size: 16px;
+    }
+
+    @media (max-height: 768px) {
+        font-size: 16px;
+    }
+}
+
+.conference-logo {
+    height: 32px;
+    width: auto;
+}
+
+header {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+
+    .header-content {
+        position:relative;
+        background: transparent !important;
+        z-index:0;
+
+        .menu-toggle {
+            margin-left: 8px;
+        }
+
+        .menu-items {
+            button {
+                span {
+                    font-family: 'Lato', sans-serif;
+                    font-size: 18px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        @media (max-width: 600px) {
+            padding: 0 !important;
+
+            .site-title {
+                margin-left: -32px;
+            }
+
+            .conference-logo {
+                margin-left: -48px;
+            }
+        }
+    }
+
+    .header-content:before {
+        content: "";
+        box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+        position: absolute;
+        z-index:-1;
+        top: 0;  left: 0;  right: 0;  bottom: 0;
+        background: #263238;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform .5s ease-in-out;
+    }
+}
+
+header.scrolled {
+    .header-content:before {
+        transform: scaleX(1);
+    }
+}
+
+.mobile-menu {
+    overflow-y: auto;
+    position: relative;
+    max-height: 100vh;
+    width: 80vw;
+
+    .menu-toggle {
+        color: #FFFFFF;
+        left: 8px;
+        position: absolute;
+        top: 8px;
+        z-index: 99;
+    }
+
+    .mat-drawer-inner-container {
+        flex-direction: column !important;
+    }
+
+    .site-name {
+        background: #263238;
+        max-height: 25vh;
+
+        h2 {
+            color: #FFFFFF;
+            font-size: 24px;
+        }
+    }
+
+    .menu-items {
+        button {
+            border-radius: 0 !important;
+            padding: 16px 0;
+
+            span {
+                font-family: 'Lato', sans-serif;
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+#intro {
+    background:
+    linear-gradient(to bottom right, rgba(0, 75, 125, 0.9), rgba(90,37,143, 0.9)),
+        url('./assets/intro-bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+
+    .countdown {
+        background: linear-gradient(to right, #F39C35 , #F1C436);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 64px;
+    }
+
+    .event-title {
+        color: #FFFFFF;
+        font-size: 94px;
+        letter-spacing: 2px;
+
+        @media (max-width: 600px) {
+            font-size: 64px;
+        }
+
+        @media (max-height: 768px) {
+            font-size: 64px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 42px;
+        }
+
+        @media (max-height: 400px) {
+            font-size: 42px;
+        }
+
+        .conference-logo {
+            height: 70px;
+            width: auto;
+        }
+    }
+
+    .event-date {
+        color: #FFFFFF;
+        font-size: 36px;
+        font-weight: lighter;
+
+        @media (max-width: 600px) {
+            font-size: 32px;
+        }
+
+        @media (max-height: 768px) {
+            font-size: 32px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 24px;
+        }
+
+        @media (max-height: 400px) {
+            font-size: 24px;
+        }
+    }
+
+    button.learn-more {
+        background: linear-gradient(to right, #F39C35 , #F1C436);
+        border-radius: 500px;
+        bottom: 128px;
+        color: rgb(0, 75, 125);
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        padding: 4px 32px;
+        position: absolute;
+
+        @media (max-height: 768px) {
+            bottom: 64px;
+        }
+
+        @media (max-height: 400px) {
+            bottom: 32px;
+            font-size: 16px;
+            padding: 4px 24px;
+        }
+    }
+}
+
+#about {
+    min-height: 40vh;
+    padding: 48px 0;
+}
+
+#speakers {
+    background:
+        linear-gradient(to bottom right, rgba(90,37,143, 0.9),rgba(0, 75, 125, 0.9)),
+        url('./assets/speakers-bg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 40vh;
+    padding: 48px 0;
+
+    h2, h3 {
+        color: #FFFFFF;
+    }
+
+    @media (max-width: 600px) {
+        min-height: calc(40vh - 48px);
+        padding: 24px 0;
+    }
+
+    .speaker {
+        padding: 16px 32px;
+
+        .profile-img {
+            border-radius: 50%;
+            height: 150px;
+            width: 150px;
+        }
+
+        .slack-handle {
+            font-size: 90%;
+
+            .fa {
+                margin-right: 4px;
+            }
+        }
+    }
+}
+
+#schedule {
+    min-height: 40vh;
+    padding: 48px 0;
+
+    .schedule-table {
+        tr {
+            margin-top: 16px;
+
+            th {
+                font-family: 'Arvo', serif;
+                font-size: 28px;
+                text-align: left;
+
+                @media (max-width: 600px) {
+                    font-size: 20px;
+                    width: 20%;
+                }
+            }
+
+            td {
+                font-family: 'Lato', sans-serif;
+                font-size: 20px;
+                padding: 16px 0;
+
+                @media (max-width: 600px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

@@ -15,6 +15,7 @@ import {reducers, effects} from './store';
 import {EffectsModule} from '@ngrx/effects';
 import {AdminModule} from './modules/admin/admin.module';
 import {AngularFireStorageModule} from '@angular/fire/storage';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
     AngularFirestoreModule,
     AngularFireStorageModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot(effects)
+    EffectsModule.forRoot(effects),
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

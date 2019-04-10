@@ -1,3 +1,11 @@
-<mat-toolbar color="primary">
-    <span>Lightning Talks</span>
-</mat-toolbar>
+<div id="header" [ngClass]="{'scrolled' : scrollPosition != 0 }">
+    <mat-toolbar class="header-content" color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+        <h1>Lightning Talks</h1>
+        <div>
+            <button mat-button>Countdown</button>
+            <button mat-button>About</button>
+            <button mat-button>Speakers</button>
+            <button mat-button>Schedule</button>
+        </div>
+    </mat-toolbar>
+</div>
