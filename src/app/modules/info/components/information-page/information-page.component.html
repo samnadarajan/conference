@@ -1,7 +1,7 @@
 <div fxLayout="column" *ngIf="eventDetails$ | async as eventDetails">
 
-  <div id="intro" #intro fxLayout="row" fxLayoutAlign="center center">
-    <div fxFlex="90" fxLayout="column" fxLayoutGap="16px" fxLayoutAlign="space-between center">   
+  <div id="intro" fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex="90" fxLayout="column" fxLayoutGap="16px" fxLayoutAlign="space-between center" fxLayoutAlign.sm="space-between start" fxLayoutAlign.xs="space-between start">   
       <span></span>
 
       <div fxLayout="column" fxLayoutGap="16px" fxLayoutAlign="center center" fxLayoutAlign.sm="center start" fxLayoutAlign.xs="center start">
@@ -18,7 +18,7 @@
 
   <div id="about" fxLayout="row" fxLayoutAlign="center center">
     <div fxFlex="90" fxLayout="row">   
-      <div fxFlex="75" fxLayout="column" fxLayoutGap="32px">
+      <div fxFlex="75" fxFlex.sm="90" fxFlex.xs="90" fxLayout="column" fxLayoutGap="32px">
           <div>
               <h2>About KL&A Lightning Talks</h2>
               <h3>It’ll be fun. Just come.</h3>

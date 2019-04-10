@@ -16,7 +16,6 @@ import {EffectsModule} from '@ngrx/effects';
 import {AdminModule} from './modules/admin/admin.module';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 @NgModule({
   declarations: [
@@ -35,8 +34,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     AngularFireStorageModule,
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot(effects),
-    FlexLayoutModule,
-    ScrollToModule.forRoot()
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

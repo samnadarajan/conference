@@ -16,12 +16,28 @@ h1, h2, h3 {
 h2 {
     color: rgba(0,0,0,.87);
     font-size: 48px;
+
+    @media (max-width: 600px) {
+        font-size: 32px;
+    }
+
+    @media (max-height: 768px) {
+        font-size: 32px;
+    }
 }
 
 h3 {
     color: rgba(0,0,0,.87);
     font-weight: lighter;
     font-size: 28px;
+
+    @media (max-width: 600px) {
+        font-size: 24px;
+    }
+
+    @media (max-height: 768px) {
+        font-size: 24px;
+    }
 }
 
 p {
@@ -30,6 +46,14 @@ p {
     font-size: 20px;
     line-height: 150%;
     margin: 0;
+
+    @media (max-width: 600px) {
+        font-size: 16px;
+    }
+
+    @media (max-height: 768px) {
+        font-size: 16px;
+    }
 }
 
 header {
@@ -73,6 +97,33 @@ header {
 header.scrolled {
     .header-content:before {
         transform: scaleX(1);
+    }
+}
+
+.mobile-menu {
+    overflow-y: auto;
+    max-height: 100vh;
+    width: 80vw;
+
+    .mat-drawer-inner-container {
+        flex-direction: column !important;
+    }
+
+    .site-name {
+        background: linear-gradient(to right, #00263F , #004B7D);
+        max-height: 30vh;
+
+        h2 {
+            color: #FFFFFF;
+            font-size: 24px;
+        }
+    }
+
+    .menu-items {
+        .mat-button {
+            border-radius: 0 !important;
+            padding: 16px 0;
+        }
     }
 }
 
@@ -162,6 +213,22 @@ header.scrolled {
 }
 
 #about {
-    min-height: calc(50vh - 48px);
-    padding: 24px 0;
+    min-height: calc(40vh - 32px);
+    padding: 16px 0;
+
+    @media (max-width: 600px) {
+        min-height: calc(40vh - 48px);
+        padding: 24px 0;
+    }
+}
+
+#speakers {
+    background: rgba(0,0,0,.03);
+    min-height: calc(40vh - 32px);
+    padding: 16px 0;
+
+    @media (max-width: 600px) {
+        min-height: calc(40vh - 48px);
+        padding: 24px 0;
+    }
 }
