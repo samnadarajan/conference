@@ -5,9 +5,12 @@
       <span></span>
 
       <div fxLayout="column" fxLayoutGap="16px" fxLayoutAlign="center center" fxLayoutAlign.sm="center start" fxLayoutAlign.xs="center start">
-        <div countdowntimer [dateTo]="eventDetails[0]?.date?.seconds" class="countdown"></div>
+        <!-- <div countdowntimer [dateTo]="eventDetails[0]?.date?.seconds" class="countdown"></div> -->
 
-        <h2 class="event-title" data-aos="zoom-in" data-aos-duration="1000">KL&A Lightning Talks</h2>
+        <h2 class="event-title" data-aos="zoom-in" data-aos-duration="1000" fxLayout="row" fxLayout.sm="column" fxLayoutAlign="center center" fxLayout.xs="column" fxLayoutAlign.sm="center start" fxLayoutAlign.xs="center start" fxLayoutGap="24px">
+            <img class="conference-logo" alt="KL&A Lightning Talks" src="assets/kla-lightning-logo.png">
+            <span>Lightning Talks</span>
+        </h2>
 
         <p class="event-date" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">April 25, 2019 at 4:30 PM</p>
       </div>

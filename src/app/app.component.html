@@ -1,8 +1,13 @@
 <mat-drawer-container fxLayout="column" autosize>
   <mat-drawer class="mobile-menu" #drawer mode="over">
+    <button mat-icon-button class="menu-toggle" (click)="drawer.toggle()">
+      <mat-icon aria-label="Open menu">close</mat-icon>
+    </button>
+
     <div class="site-name" fxFlex fxLayoutAlign="center center">
-      <h2>KL&A Lightning Talks</h2>
+      <img class="conference-logo" alt="KL&A Lightning Talks" src="assets/kla-lightning-logo.png">
     </div>
+
     <div class="menu-items" fxFlex fxLayout="column">
       <button mat-button (click)="drawer.toggle()" routerLink="." fragment="intro">Countdown</button>
       <button mat-button (click)="drawer.toggle()" routerLink="." fragment="about">About</button>
@@ -11,24 +16,23 @@
     </div>
   </mat-drawer>
 
-  <header [ngClass]="{'scrolled' : scrollPosition != 0 }">
+  <header fxLayout="row" [ngClass]="{'scrolled' : scrollPosition != 0 }">
       <mat-toolbar class="header-content" color="primary" fxHide.sm fxHide.xs fxLayout="row" fxLayoutAlign="space-between center">
-          <h1 class="site-title">Lightning Talks</h1>
-          <div class="menu-items">
-            <button mat-button routerLink="." fragment="intro">Countdown</button>
-            <button mat-button routerLink="." fragment="about">About</button>
-            <button mat-button routerLink="." fragment="speakers">Speakers</button>
-            <button mat-button routerLink="." fragment="schedule">Schedule</button>
-          </div>
-          <span></span>
+        <img class="conference-logo" alt="KL&A Lightning Talks" src="assets/kla-lightning-logo.png">
+        <div class="menu-items">
+          <button mat-button routerLink="." fragment="intro">Countdown</button>
+          <button mat-button routerLink="." fragment="about">About</button>
+          <button mat-button routerLink="." fragment="speakers">Speakers</button>
+          <button mat-button routerLink="." fragment="schedule">Schedule</button>
+        </div>
       </mat-toolbar>
 
       <mat-toolbar class="header-content" color="primary" fxHide.xl fxHide.lg fxHide.md fxLayout="row" fxLayoutAlign="space-between center">
-        <button mat-icon-button (click)="drawer.toggle()">
+        <button mat-icon-button class="menu-toggle" (click)="drawer.toggle()">
           <mat-icon aria-label="Open menu">menu</mat-icon>
         </button>
 
-        <h1 class="site-title">Lightning Talks</h1>
+        <img class="conference-logo" alt="KL&A Lightning Talks" src="assets/kla-lightning-logo.png">
 
         <span></span>
       </mat-toolbar>
