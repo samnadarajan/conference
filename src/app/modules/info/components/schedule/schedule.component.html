@@ -1,3 +1,40 @@
-<!-- <div *ngFor="let s of (sessionList$ | async)">
-  {{s | json}}
-</div> -->
+<div id="schedule" fxLayout="row" fxLayoutAlign="center center">
+  <div fxFlex="90" fxLayout="row">   
+    <div fxFlex fxLayout="column" fxLayoutGap="32px">
+      <div fxFlex>
+        <h2>Schedule</h2>
+        <h3>Laugh a little. Learn a lot.</h3>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <span fxFlex="25" fxHide.sm fxHide.xs></span>
+        <table class="schedule-table" fxFlex="50" fxFlex.sm="100" fxFlex.xs="100">
+          <tr>
+            <th>Time</th>
+            <th>Event</th>
+          </tr>
+          <tr>
+            <td>4:30 PM</td>
+            <td>Food/Beverages and Networking</td>
+          </tr>
+          <tr>
+            <td>4:40 PM</td>
+            <td>First Half of Talks</td>
+          </tr>
+          <tr>
+            <td>5:10 PM</td>
+            <td>Break for Networking</td>
+          </tr>
+          <tr>
+            <td>5:20 PM</td>
+            <td>Second Half of Talks</td>
+          </tr>
+          <tr>
+            <td>5:50 PM</td>
+            <td>Closing Statements</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

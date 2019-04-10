@@ -294,3 +294,35 @@ header.scrolled {
         }
     }
 }
+
+#schedule {
+    min-height: 40vh;
+    padding: 48px 0;
+
+    .schedule-table {
+        tr {
+            margin-top: 16px;
+
+            th {
+                font-family: 'Arvo', serif;
+                font-size: 28px;
+                text-align: left;
+
+                @media (max-width: 600px) {
+                    font-size: 20px;
+                    width: 20%;
+                }
+            }
+
+            td {
+                font-family: 'Lato', sans-serif;
+                font-size: 20px;
+                padding: 16px 0;
+
+                @media (max-width: 600px) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
