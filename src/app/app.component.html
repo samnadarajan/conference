@@ -11,8 +11,10 @@
     <div class="menu-items" fxFlex fxLayout="column">
       <!-- <button mat-button (click)="drawer.toggle()">Countdown</button> -->
       <button mat-button (click)="drawer.toggle()" (click)="goToSection('about')">About</button>
-      <button mat-button (click)="drawer.toggle()" (click)="goToSection('speakers')">Speakers</button>
-      <button mat-button (click)="drawer.toggle()" (click)="goToSection('schedule')">Schedule</button>
+      <!-- <button mat-button (click)="drawer.toggle()" (click)="goToSection('speakers')">Speakers</button>
+      <button mat-button (click)="drawer.toggle()" (click)="goToSection('schedule')">Schedule</button> -->
+      <button mat-button (click)="drawer.toggle()" (click)="goToSection('spring2019')">Spring 2019</button>
+      <button mat-button (click)="drawer.toggle()" (click)="goToSection('spring2019')">Spring 2019</button>
     </div>
   </mat-drawer>
 
@@ -24,8 +26,9 @@
         <div class="menu-items">
           <!-- <button mat-button>Countdown</button> -->
           <button mat-button (click)="goToSection('about')">About</button>
-          <button mat-button (click)="goToSection('speakers')">Speakers</button>
-          <button mat-button (click)="goToSection('schedule')">Schedule</button>
+          <!-- <button mat-button (click)="goToSection('speakers')">Speakers</button>
+          <button mat-button (click)="goToSection('schedule')">Schedule</button> -->
+          <button mat-button (click)="goToSection('spring2019')">Spring 2019</button>
         </div>
       </mat-toolbar>
 

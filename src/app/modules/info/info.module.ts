@@ -8,6 +8,8 @@ import {CommonModule} from '@angular/common';
 import {MaterialModule} from '../material/material.module';
 import {CountdownTimerDirective} from '../../directives/countdown-timer.directive';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { Spring2019Component } from './components/spring2019/spring2019.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const modules = [
   InformationPageComponent,
@@ -28,7 +30,9 @@ const modules = [
     ScheduleComponent,
     SpeakersComponent,
     SpeakerComponent,
-    CountdownTimerDirective
+    CountdownTimerDirective,
+    Spring2019Component,
+    FooterComponent
   ]
 })
 export class InfoModule { }

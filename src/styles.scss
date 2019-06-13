@@ -234,15 +234,8 @@ header.scrolled {
         }
     }
 
-    button.learn-more {
-        background: linear-gradient(to right, #F39C35 , #F1C436);
-        border-radius: 500px;
+    .learn-more {
         bottom: 128px;
-        color: rgb(0, 75, 125);
-        font-size: 18px;
-        font-weight: 300;
-        letter-spacing: 1px;
-        padding: 4px 32px;
         position: absolute;
 
         @media (max-height: 768px) {
@@ -251,8 +244,21 @@ header.scrolled {
 
         @media (max-height: 400px) {
             bottom: 32px;
-            font-size: 16px;
-            padding: 4px 24px;
+        }
+
+        button {
+            background: linear-gradient(to right, #F39C35 , #F1C436);
+            border-radius: 500px;
+            color: rgb(0, 75, 125);
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            padding: 4px 32px;
+    
+            @media (max-height: 400px) {
+                font-size: 16px;
+                padding: 4px 24px;
+            }
         }
     }
 }
@@ -353,5 +359,15 @@ header.scrolled {
         @media (max-width: 600px) {
             font-size: 28px;
         }
+    }
+}
+
+.youtube-embed {
+    height: 400px;
+    width: 600px;
+
+    @media (max-width: 600px) {
+        height: 100%;
+        width: 90%;
     }
 }
